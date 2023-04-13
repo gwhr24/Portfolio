@@ -13,7 +13,7 @@ import Navbar from './components/Navbar.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #115;
+  color: #003;
 }
 body {
   padding: 0;

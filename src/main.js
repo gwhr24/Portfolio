@@ -8,10 +8,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faGear)
+library.add(faGear, faInstagram, faLinkedin)
 
 // Vuetify
 import 'vuetify/styles'

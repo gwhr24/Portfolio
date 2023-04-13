@@ -8,7 +8,7 @@
         <div class="links">
             <router-link class="link" to="/" exact>Home</router-link>
             <router-link class="link" to="/projects" exact>Projects</router-link>
-            <router-link class="link" to="/contact" exact>Contact Me</router-link>
+            <router-link class="link" to="/connect" exact>Connect</router-link>
         </div>
     </div>
 </template>
@@ -34,6 +34,9 @@ a {
 a.link {
     margin: 0 10px;
     font-size: 1.2em;
+}
+a.link:hover {
+    opacity: 0.6;
 }
 a.title {
     font-size: 1.5em;
