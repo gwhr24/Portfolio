@@ -42,4 +42,7 @@ h2 {
 p {
   font-size: 1.2em;
 }
+h2, p {
+  margin-left: 5px;
+}
 </style>
