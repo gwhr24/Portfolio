@@ -1,10 +1,10 @@
 <template>
-  <div class="homeContainer">
-    <img class="headshot" src="../assets/headshot.png"/>
-    <div class="textContainer">
-      <h1>Garrett Reinke</h1>
-      <h2>Mechanical Engineering</h2>
-      <p>
+  <div class="homeContainer flex-col md:flex-row">
+    <img class="headshot w-[50%] md:w-[30%]" src="../assets/headshot.png"/>
+    <div class="textContainer w-[60%] md:w-[40%] sm:text-center  md:text-left">
+      <h1 class="font-bold text-xl md:text-5xl">Garrett Reinke</h1>
+      <h2 class="font-bold text-sm md:text-2xl">Mechanical Engineering</h2>
+      <p class="text-xs md:text-lg">
         I am a hard working and fast learning Mechanical Engineer with three years of experience in Aquarium Life Support Systems and Mechanical Engineering design.
         I thrive in collaborative settings while building strong relationships and a positive work environment.
       </p>
@@ -18,9 +18,7 @@
 
 <style scoped>
 div.textContainer {
-  text-align: left;
-  width: 40%;
-  margin: 20px;
+  margin: 3%;
 }
 div.homeContainer {
   height: 85vh;
@@ -29,18 +27,7 @@ div.homeContainer {
   justify-content: center;
 }
 img.headshot {
-  width: 35%;
   border-radius: 1000px;
-}
-h1 {
-  font-size: 3em;
-  margin: 0;
-}
-h2 {
-  font-size: 1.7em;
-}
-p {
-  font-size: 1.2em;
 }
 h2, p {
   margin-left: 5px;

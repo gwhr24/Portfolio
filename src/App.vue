@@ -5,9 +5,15 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue'
+
+window.onscroll = () => {window.scrollTo(0, 0)}
 </script>
 
 <style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

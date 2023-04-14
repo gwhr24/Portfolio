@@ -1,12 +1,16 @@
 <template>
     <div class="connectContainer">
-        <h1>Contact Information</h1>
-        <p>gwhr24@gmail.com</p>
-        <p>(417) 299-6096</p>
-        <h2>Social Media</h2>
+        <h1 class="text-3xl font-bold">Contact Information</h1>
+        <p class="text-lg">gwhr24@gmail.com</p>
+        <p class="text-lg">(417) 299-6096</p>
+        <h2 class="text-2xl font-bold">Social Media</h2>
         <div>
-            <font-awesome-icon icon="fa-brands fa-instagram" size="2xl"/>
-            <font-awesome-icon icon="fa-brands fa-linkedin" size="2xl"/>
+            <a href="https://www.instagram.com/asap_reinke/?hl=en">
+                <font-awesome-icon icon="fa-brands fa-instagram" size="2xl"/>
+            </a>
+            <a href="https://www.linkedin.com/in/garrett-reinke-399315188">
+                <font-awesome-icon icon="fa-brands fa-linkedin" size="2xl"/>
+            </a>
         </div>
     </div>
 </template>

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import './styles/app.css';
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -9,10 +10,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { faGear, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faGear, faInstagram, faLinkedin)
+library.add(faGear, faInstagram, faLinkedin, faChevronDown)
 
 // Vuetify
 import 'vuetify/styles'
