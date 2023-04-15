@@ -1,7 +1,7 @@
 <template>
-    <Carousel class="projectCarousel" :items-to-show="2" :wrap-around="true" :transition="500" :autoplay="5000">
+    <Carousel class="projectCarousel" :items-to-show="2" :wrap-around="true" :transition="500" :autoplay="modalOpen ? 0 : 5000">
         <Slide v-for="project in projects" :key="project">
-            <div class="slide" @click="openModal(project)">
+            <div class="slide" @click="e => openModal(e, project)">
                 <v-img class="projectImg" :src="project.img"/>
                 <h3 class="font-bold mt-5 text-xs md:text-lg">{{ project.title }}</h3>
                 <p class="text-xs md:text-base">{{ project.date }}</p>
@@ -47,13 +47,19 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import { ref } from 'vue';
 
 const modal = ref(null)
+const modalOpen = ref(false)
 
-const openModal = (project) => {
+const openModal = (e, project) => {
+    let element = e.target
+    while (element.nodeName != "LI") element = element.parentElement
+    if (!element.classList.contains("carousel__slide--active")) return
+    modalOpen.value = true
     modal.value.classList.add("open")
     curProject.value = project
 }
 
 const closeModal = () => {
+    modalOpen.value = false
     modal.value.classList.remove("open")
 }
 
@@ -119,7 +125,7 @@ const projects = [{
                'Bearing assembly with machined cone spacer for suspension']
     },
     {
-        img: require('../assets/setupcad-big.png'),
+        img: require('../assets/image.png'),
         title: "Faraday's Law Poster Presentation",
         date: '2021',
         media: [{
@@ -128,7 +134,7 @@ const projects = [{
             vid: false
         },
         {
-            src: require('../assets/setupcad-big.png'),
+            src: require('../assets/image.png'),
             desc: "Faraday's Law Experimental Design", 
             vid: false
         },
@@ -218,9 +224,16 @@ div.projectImg, div.modalImg {
     max-height: 80%;
     width: 100%;
 }
-svg.carousel__icon {
-    background-color: rgba(150, 150, 150, 0.3);
-    border-radius: 15px;
+button.carousel__prev, button.carousel__next {
+    background-color: rgba(150, 150, 150, 0.6);
+    border-radius: 100px;
+    padding: 8px
+}
+button.carousel__prev{
+    margin-left: 20px;
+}
+button.carousel__next{
+    margin-right: 20px;
 }
 div.modal {
     background: #fff;
