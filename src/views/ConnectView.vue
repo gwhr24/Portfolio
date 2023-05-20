@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import resume from '../assets/Garrett Reinke Resume April 2023.pdf'
+import resume from '../assets/Resume May 2023.pdf'
 </script>
 
 <style scoped>
